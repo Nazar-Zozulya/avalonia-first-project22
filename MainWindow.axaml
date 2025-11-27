@@ -1,0 +1,45 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="350" d:DesignHeight="350"
+        Width="350" Height="350"
+        x:Class="AvaloniaFirstProject.MainWindow"
+        Title="AvaloniaFirstProject"
+        >
+
+    <Border CornerRadius="25">
+        <Grid RowDefinitions="90,*" Width="350" Height="350">
+            <!-- Header -->
+            <Grid Grid.Row="0" ColumnDefinitions="*,*" Width="350" >
+                <StackPanel Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="10" >
+                    <Image Width="24" Height="24" Source="avares://AvaloniaFirstProject/Assets/plane.png" />
+                    <TextBlock FontSize="16" FontFamily="Roboto" Foreground="White">Поточна позиція</TextBlock>
+                </StackPanel>
+                <StackPanel Grid.Column="1" Width="44" Height="44" HorizontalAlignment="Center" VerticalAlignment="Center" >
+                    <Border CornerRadius="6" Background="#BBB35E" Width="44" Height="44">
+                            <Image Width="24" Height="24" Source="avares://AvaloniaFirstProject/Assets/reload.png" />
+                    </Border>
+                </StackPanel>
+            </Grid>    
+
+            <StackPanel Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <TextBlock FontSize="44" FontFamily="Roboto" Foreground="White" Margin="10, 0, 0, 0">Поточна позиція</TextBlock>
+                <StackPanel Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10, 0, 0, 0">
+                    <Image Width="75" Height="75" Source="avares://AvaloniaFirstProject/Assets/weather.png" />
+                    <TextBlock FontSize="74" FontFamily="Roboto" Foreground="White">11°</TextBlock>
+                </StackPanel>
+                <TextBlock FontSize="24" FontFamily="Roboto" Foreground="White" Margin="10, 0, 0, 0">Хмарно</TextBlock>
+                <TextBlock FontSize="24" FontFamily="Roboto" Foreground="White" Margin="10, 0, 0, 0">Макс.:11°, мін.:0°</TextBlock>
+            </StackPanel>
+
+
+        </Grid>
+        <Border.Background>
+            <LinearGradientBrush StartPoint="0%, 100%" EndPoint="100%, 0%">
+                <GradientStop Offset="0.05" Color="#87CEFA"/>
+                <GradientStop Offset="1.0" Color="#FFDF56"/>
+            </LinearGradientBrush>
+        </Border.Background>
+    </Border>
+</Window>
