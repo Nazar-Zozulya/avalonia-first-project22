@@ -7,12 +7,13 @@
         x:Class="AvaloniaFirstProject.MainWindow"
         Title="AvaloniaFirstProject"
         >
-    <Window.Styles>
-        <StyleInclude Source="avares://AvaloniaFirstProject/MainWindowStyles.axaml" />    
-    </Window.Styles>
+    <!-- <Window.Styles> -->
+        <!-- <StyleInclude Source="avares://AvaloniaFirstProject/MainWindowStyles.axaml" />     -->
+    <!-- </Window.Styles> -->
+
 
     <Border CornerRadius="25">
-        <Grid RowDefinitions="auto,*" Width="350" Height="350" x:Class=".bg-grid" >
+        <Grid RowDefinitions="auto,*" Width="350" Height="350" >
             <!-- Header -->
             <Grid Grid.Row="0" ColumnDefinitions="*,*" Width="350" Margin="0,25,0,0" > 
                 <StackPanel Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" Spacing="10" Margin="10,0,0,0" >
@@ -20,8 +21,11 @@
                     <TextBlock FontSize="16" FontFamily="Roboto" Foreground="White">Дніпро</TextBlock>
                 </StackPanel>
                 <StackPanel Grid.Column="1" Width="44" Height="44" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0" >
-                    <Button CornerRadius="6" Background="#BBB35E" Width="44" Height="44" >
-                            <Image Width="14" Height="14" Source="avares://AvaloniaFirstProject/Assets/reload.png" />
+                    <Button CornerRadius="6" Width="44" Height="44" >
+                        <Button.Background >
+                            <SolidColorBrush Opacity="0.2">#000</SolidColorBrush>
+                        </Button.Background>
+                        <Image Width="14" Height="14" Source="avares://AvaloniaFirstProject/Assets/reload.png" />
                     </Button>
                 </StackPanel>
             </Grid>    
