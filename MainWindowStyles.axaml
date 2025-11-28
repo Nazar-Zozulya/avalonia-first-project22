@@ -1,0 +1,15 @@
+<Styles xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style Selector="TextBlock">
+        <Setter Property="Foreground" Value="White" />
+    </Style>
+    <Style Selector=".bg-grid">
+        <Setter Property="Background" > 
+        <Setter.Value>
+            <LinearGradientBrush StartPoint="0%, 100%" EndPoint="100%, 0%">
+                <GradientStop Offset="0.05" Color="#87CEFA"/>
+                <GradientStop Offset="1.0" Color="#FFDF56"/>
+            </LinearGradientBrush>   
+        </Setter.Value>
+        </Setter>
+    </Style>
+</Styles>

@@ -7,39 +7,44 @@
         x:Class="AvaloniaFirstProject.MainWindow"
         Title="AvaloniaFirstProject"
         >
+    <Window.Styles>
+        <StyleInclude Source="avares://AvaloniaFirstProject/MainWindowStyles.axaml" />    
+    </Window.Styles>
 
     <Border CornerRadius="25">
-        <Grid RowDefinitions="90,*" Width="350" Height="350">
+        <Grid RowDefinitions="auto,*" Width="350" Height="350" x:Class=".bg-grid" >
             <!-- Header -->
-            <Grid Grid.Row="0" ColumnDefinitions="*,*" Width="350" >
-                <StackPanel Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="10" >
-                    <Image Width="24" Height="24" Source="avares://AvaloniaFirstProject/Assets/plane.png" />
-                    <TextBlock FontSize="16" FontFamily="Roboto" Foreground="White">Поточна позиція</TextBlock>
+            <Grid Grid.Row="0" ColumnDefinitions="*,*" Width="350" Margin="0,25,0,0" > 
+                <StackPanel Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" Spacing="10" Margin="10,0,0,0" >
+                    <Image Width="12" Height="12" Source="avares://AvaloniaFirstProject/Assets/plane.png" />
+                    <TextBlock FontSize="16" FontFamily="Roboto" Foreground="White">Дніпро</TextBlock>
                 </StackPanel>
-                <StackPanel Grid.Column="1" Width="44" Height="44" HorizontalAlignment="Center" VerticalAlignment="Center" >
-                    <Border CornerRadius="6" Background="#BBB35E" Width="44" Height="44">
-                            <Image Width="24" Height="24" Source="avares://AvaloniaFirstProject/Assets/reload.png" />
-                    </Border>
+                <StackPanel Grid.Column="1" Width="44" Height="44" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0" >
+                    <Button CornerRadius="6" Background="#BBB35E" Width="44" Height="44" >
+                            <Image Width="14" Height="14" Source="avares://AvaloniaFirstProject/Assets/reload.png" />
+                    </Button>
                 </StackPanel>
             </Grid>    
 
-            <StackPanel Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Center">
-                <TextBlock FontSize="44" FontFamily="Roboto" Foreground="White" Margin="10, 0, 0, 0">Поточна позиція</TextBlock>
+            <StackPanel Grid.Row="1" Orientation="Vertical"  HorizontalAlignment="Left" VerticalAlignment="Top" Spacing="20">
+                <TextBlock FontSize="44" FontFamily="Roboto" Foreground="White" Margin="10, 0, 0, 0">Дніпро</TextBlock>
                 <StackPanel Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10, 0, 0, 0">
                     <Image Width="75" Height="75" Source="avares://AvaloniaFirstProject/Assets/weather.png" />
                     <TextBlock FontSize="74" FontFamily="Roboto" Foreground="White">11°</TextBlock>
                 </StackPanel>
-                <TextBlock FontSize="24" FontFamily="Roboto" Foreground="White" Margin="10, 0, 0, 0">Хмарно</TextBlock>
-                <TextBlock FontSize="24" FontFamily="Roboto" Foreground="White" Margin="10, 0, 0, 0">Макс.:11°, мін.:0°</TextBlock>
+                <StackPanel >
+                    <TextBlock FontSize="24" FontFamily="Roboto" Margin="10, 0, 0, 0">Хмарно</TextBlock>
+                    <TextBlock FontSize="24" FontFamily="Roboto" Margin="10, 0, 0, 0">Макс.:11°, мін.:0°</TextBlock>    
+                </StackPanel>
             </StackPanel>
 
 
         </Grid>
-        <Border.Background>
-            <LinearGradientBrush StartPoint="0%, 100%" EndPoint="100%, 0%">
+        <!-- <Border.Background> -->
+            <!-- <LinearGradientBrush StartPoint="0%, 100%" EndPoint="100%, 0%">
                 <GradientStop Offset="0.05" Color="#87CEFA"/>
                 <GradientStop Offset="1.0" Color="#FFDF56"/>
-            </LinearGradientBrush>
-        </Border.Background>
+            </LinearGradientBrush> -->
+        <!-- </Border.Background> -->
     </Border>
 </Window>
