@@ -7,38 +7,35 @@
         x:Class="AvaloniaFirstProject.MainWindow"
         Title="AvaloniaFirstProject"
         >
-    <!-- <Window.Styles> -->
-        <!-- <StyleInclude Source="avares://AvaloniaFirstProject/MainWindowStyles.axaml" />     -->
-    <!-- </Window.Styles> -->
+    <Window.Styles>
+        <StyleInclude Source="avares://AvaloniaFirstProject/MainWindowStyles.axaml" />    
+    </Window.Styles>
 
 
-    <Border CornerRadius="25">
-        <Grid RowDefinitions="auto,*" Width="350" Height="350" >
+    <Border Classes="main-border">
+        <Grid RowDefinitions="auto,*" Classes="bg-grid"  >
             <!-- Header -->
-            <Grid Grid.Row="0" ColumnDefinitions="*,*" Width="350" Margin="0,25,0,0" > 
-                <StackPanel Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" Spacing="10" Margin="10,0,0,0" >
-                    <Image Width="12" Height="12" Source="avares://AvaloniaFirstProject/Assets/plane.png" />
-                    <TextBlock FontSize="16" FontFamily="Roboto" Foreground="White">Дніпро</TextBlock>
+            <Grid Grid.Row="0" ColumnDefinitions="*,*" Classes="header" > 
+                <StackPanel Grid.Column="0" Classes="small-current-city" >
+                    <Image Source="avares://AvaloniaFirstProject/Assets/plane.png" Classes="plane-icon" />
+                    <TextBlock Classes="small-current-city-text">Дніпро</TextBlock>
                 </StackPanel>
-                <StackPanel Grid.Column="1" Width="44" Height="44" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0" >
-                    <Button CornerRadius="6" Width="44" Height="44" >
-                        <Button.Background >
-                            <SolidColorBrush Opacity="0.2">#000</SolidColorBrush>
-                        </Button.Background>
-                        <Image Width="14" Height="14" Source="avares://AvaloniaFirstProject/Assets/reload.png" />
+                <StackPanel Grid.Column="1" Classes="reload-panel" >
+                    <Button Classes="reload-button" >
+                        <Image Source="avares://AvaloniaFirstProject/Assets/reload.png" Classes="reload-icon" />
                     </Button>
                 </StackPanel>
             </Grid>    
 
-            <StackPanel Grid.Row="1" Orientation="Vertical"  HorizontalAlignment="Left" VerticalAlignment="Top" Spacing="20">
-                <TextBlock FontSize="44" FontFamily="Roboto" Foreground="White" Margin="10, 0, 0, 0">Дніпро</TextBlock>
-                <StackPanel Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10, 0, 0, 0">
-                    <Image Width="75" Height="75" Source="avares://AvaloniaFirstProject/Assets/weather.png" />
-                    <TextBlock FontSize="74" FontFamily="Roboto" Foreground="White">11°</TextBlock>
+            <StackPanel Grid.Row="1" Classes="content">
+                <TextBlock Classes="current-city-text">Дніпро</TextBlock>
+                <StackPanel Grid.Column="0" Classes="weather-panel">
+                    <Image Source="avares://AvaloniaFirstProject/Assets/weather.png" Classes="weather-photo" />
+                    <TextBlock Classes="weather-degrees">11°</TextBlock>
                 </StackPanel>
-                <StackPanel >
-                    <TextBlock FontSize="24" FontFamily="Roboto" Margin="10, 0, 0, 0">Хмарно</TextBlock>
-                    <TextBlock FontSize="24" FontFamily="Roboto" Margin="10, 0, 0, 0">Макс.:11°, мін.:0°</TextBlock>    
+                <StackPanel Classes="additional-info-panel">
+                    <TextBlock Classes="weather-status" >Хмарно</TextBlock>
+                    <TextBlock Classes="weather-max-min">Макс.:11°, мін.:0°</TextBlock>    
                 </StackPanel>
             </StackPanel>
 

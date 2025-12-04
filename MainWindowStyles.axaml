@@ -1,15 +1,111 @@
 <Styles xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
     <Style Selector="TextBlock">
         <Setter Property="Foreground" Value="White" />
+        <Setter Property="FontFamily" Value="Roboto" />
     </Style>
-    <!-- <Style Selector=".bg-grid">
-        <Setter Property="Background" > 
-        <Setter.Value>
-            <LinearGradientBrush StartPoint="0%, 100%" EndPoint="100%, 0%">
-                <GradientStop Offset="0.05" Color="#87CEFA"/>
-                <GradientStop Offset="1.0" Color="#FFDF56"/>
-            </LinearGradientBrush>   
-        </Setter.Value>
+
+    <Style Selector="Border.main-border">
+        <Setter Property="CornerRadius" Value="25" />
+        
+    </Style>
+
+    <Style Selector="Grid.bg-grid">
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush StartPoint="0%, 100%" EndPoint="100%, 0%">
+                    <GradientStop Offset="0.05" Color="#87CEFA"/>
+                    <GradientStop Offset="1.0" Color="#FFDF56"/>
+                </LinearGradientBrush>
+            </Setter.Value>
         </Setter>
-    </Style> -->
+        <Setter Property="Width" Value="350" />
+        <Setter Property="Height" Value="350" />
+    </Style>
+
+    <Style Selector="Grid.header">
+        <Setter Property="Width" Value="350" />
+        <Setter Property="Margin" Value="0,25,0,0" />
+    </Style>
+
+    <Style Selector="StackPanel.small-current-city">
+        <Setter Property="Orientation" Value="Horizontal" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="Spacing" Value="10" />
+        <Setter Property="Margin" Value="10,0,0,0" />
+    </Style>
+
+    <Style Selector="Image.plane-icon">
+        <Setter Property="Width" Value="12" />
+        <Setter Property="Height" Value="12" />
+    </Style>
+
+    <Style Selector="TextBlock.small-current-city-text">
+        <Setter Property="FontSize" Value="16" />
+    </Style>
+
+    <Style Selector="StackPanel.reload-panel">
+        <Setter Property="Width" Value="44" />
+        <Setter Property="Height" Value="44" />
+        <Setter Property="HorizontalAlignment" Value="Right" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="Margin" Value="10,0,0,0" />
+    </Style>
+
+    <Style Selector="Button.reload-button">
+        <Setter Property="CornerRadius" Value="6" />
+        <Setter Property="Width" Value="44" />
+        <Setter Property="Height" Value="44" />
+        <Setter Property="Background">
+            <Setter.Value >
+                <SolidColorBrush Color="Black" Opacity="0.2"></SolidColorBrush>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style Selector="Image.reload-icon">
+        <Setter Property="Width" Value="14" />
+        <Setter Property="Height" Value="14" />
+    </Style>
+
+    <Style Selector="StackPanel.content">
+        <Setter Property="Orientation" Value="Vertical" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="VerticalAlignment" Value="Top" />
+        <Setter Property="Spacing" Value="20" />
+    </Style>
+
+    <Style Selector="TextBlock.current-city-text">
+        <Setter Property="FontSize" Value="44" />
+        <Setter Property="Margin" Value="10, 0, 0, 0" />
+    </Style>
+
+    <Style Selector="StackPanel.weather-panel">
+        <Setter Property="Orientation" Value="Horizontal" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="Margin" Value="10, 0, 0, 0" />
+    </Style>
+
+    <Style Selector="Image.weather-photo">
+        <Setter Property="Width" Value="75" />
+        <Setter Property="Height" Value="75" />
+    </Style>
+
+    <Style Selector="TextBlock.weather-degrees">
+        <Setter Property="FontSize" Value="74" />
+    </Style>
+
+    <Style Selector="StackPanel.additional-info-panel">
+    </Style>
+
+    <Style Selector="TextBlock.weather-status">
+        <Setter Property="Margin" Value="10, 0, 0, 0" />
+    </Style>
+
+    <Style Selector="TextBlock.weather-max-min">
+        <Setter Property="Margin" Value="10, 0, 0, 0" />
+    </Style>
+
 </Styles>
