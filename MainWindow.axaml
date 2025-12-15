@@ -26,7 +26,6 @@
                     </Button>
                 </StackPanel>
             </Grid>    
-
             <StackPanel Grid.Row="1" Classes="content">
                 <TextBlock Classes="current-city-text">Дніпро</TextBlock>
                 <StackPanel Grid.Column="0" Classes="weather-panel">
